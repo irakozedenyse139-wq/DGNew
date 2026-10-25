@@ -87,7 +87,7 @@ export function DevIcon() {
                             activeOpacity={0.75}
                         >
                             <View style={styles.emailIconWrap}>
-                                <Ionicons name="mail-outline" size={16} color="#10B981" />
+                                <Ionicons name="mail-outline" size={16} color="#B97D50" />
                             </View>
                             <Text style={styles.emailText}>{DEV.email}</Text>
                             <Ionicons name="open-outline" size={13} color="#6B7280" style={{ marginLeft: 4 }} />
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     gradientStrip: {
         width: '100%',
         height: 70,
-        backgroundColor: '#10B981',
+        backgroundColor: '#B97D50',
     },
     avatarWrap: {
         marginTop: -36,
@@ -150,11 +150,11 @@ const styles = StyleSheet.create({
         width: 68,
         height: 68,
         borderRadius: 34,
-        backgroundColor: '#10B981',
+        backgroundColor: '#B97D50',
         justifyContent: 'center',
         alignItems: 'center',
         elevation: 4,
-        shadowColor: '#10B981',
+        shadowColor: '#B97D50',
         shadowOpacity: 0.45,
         shadowRadius: 10,
         shadowOffset: { width: 0, height: 4 },
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
     },
     devHandle: {
         fontSize: 13,
-        color: '#10B981',
+        color: '#B97D50',
         marginTop: 4,
         fontWeight: '700',
         letterSpacing: 0.5,
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
     divider: {
         width: '80%',
         height: 1,
-        backgroundColor: '#F3F4F6',
+        backgroundColor: '#F8F3E8',
         marginVertical: 14,
     },
     socials: {
@@ -223,9 +223,9 @@ const styles = StyleSheet.create({
     emailRow: {
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: '#F0FDF4',
+        backgroundColor: '#F6EBDD',
         borderWidth: 1,
-        borderColor: '#BBF7D0',
+        borderColor: '#E6D0B4',
         borderRadius: 10,
         paddingHorizontal: 12,
         paddingVertical: 10,
@@ -238,18 +238,18 @@ const styles = StyleSheet.create({
         width: 28,
         height: 28,
         borderRadius: 8,
-        backgroundColor: '#D1FAE5',
+        backgroundColor: '#F6EBDD',
         justifyContent: 'center',
         alignItems: 'center',
     },
     emailText: {
         flex: 1,
         fontSize: 12.5,
-        color: '#065F46',
+        color: '#0D2B45',
         fontWeight: '600',
     },
     closeBtn: {
-        backgroundColor: '#F3F4F6',
+        backgroundColor: '#F8F3E8',
         paddingHorizontal: 32,
         paddingVertical: 11,
         borderRadius: 12,

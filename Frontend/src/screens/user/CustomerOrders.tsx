@@ -233,7 +233,7 @@ const styles = StyleSheet.create({
     statusBadgeText: { color: '#FFFFFF', fontSize: 11, fontWeight: '700' },
     priceText: { fontSize: 18, fontWeight: '900', color: Colors.primary, marginBottom: 8 },
     productsBox: {
-        backgroundColor: '#F9FAFB',
+        backgroundColor: '#F8F3E8',
         padding: 10,
         borderRadius: 8,
         marginVertical: 4,

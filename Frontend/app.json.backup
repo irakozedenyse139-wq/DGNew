@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "D&G E-Commerce",
+    "slug": "dg-e-commerce",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/dg-ecommerce-icon.png",
+    "scheme": "dgecommerce",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "icon": "./assets/images/dg-ecommerce-icon.png",
+      "bundleIdentifier": "com.dgretail.app",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.dgretail.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0D2B45",
+        "foregroundImage": "./assets/images/dg-ecommerce-icon.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "server",
+      "favicon": "./assets/images/dg-ecommerce-icon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F8F3E8",
+          "image": "./assets/images/dg-ecommerce-icon.png",
+          "imageWidth": 200
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "5b71dac4-0402-4489-a389-2b9bd115de6d"
+      }
+    }
+  }
+}

@@ -60,11 +60,11 @@ export default function LoginScreen() {
                     {/* Branding Header */}
                     <View style={styles.brandContainer}>
                         <Image
-                            source={require('../../../assets/DGLoGo.jpg')}
+                            source={require('../../../assets/images/dg-ecommerce-icon.png')}
                             style={styles.logoImage}
                             resizeMode="contain"
                         />
-                        <Text style={styles.brandSub}>E-Commerce App</Text>
+                        <Text style={styles.brandSub}>D&amp;G E-Commerce</Text>
                     </View>
 
 
@@ -128,7 +128,7 @@ export default function LoginScreen() {
 const styles = StyleSheet.create({
     safeContainer: {
         flex: 1,
-        backgroundColor: '#F3F4F6',
+        backgroundColor: '#F8F3E8',
     },
     keyboardContainer: {
         flex: 1,
@@ -144,9 +144,9 @@ const styles = StyleSheet.create({
         marginBottom: 24,
     },
     logoImage: {
-        width: 100,
-        height: 100,
-        borderRadius: 22,
+        width: 82,
+        height: 82,
+        borderRadius: 18,
         marginBottom: 8,
         shadowColor: Colors.primary,
         shadowOffset: { width: 0, height: 4 },
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         padding: 24,
         borderWidth: 1.5,
-        borderColor: '#E5E7EB',
+        borderColor: '#DCE5EC',
         shadowColor: '#000000',
         shadowOffset: { width: 0, height: 6 },
         shadowOpacity: 0.08,

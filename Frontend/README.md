@@ -1,4 +1,4 @@
-# DG Retail App — Frontend Client
+# D&G E-Commerce — Frontend Client
 **Production-Ready React Native & Expo Router Mobile Application**
 
 For the complete technical, architectural, and operational documentation, see:

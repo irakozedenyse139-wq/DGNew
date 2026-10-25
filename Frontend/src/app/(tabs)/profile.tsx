@@ -167,7 +167,7 @@ export default function ProfileScreen() {
                     <Text style={styles.logoutBtnText}>{t.logout}</Text>
                 </TouchableOpacity>
 
-                <Text style={styles.appVersion}>DG Retail App · v1.0.0</Text>
+                <Text style={styles.appVersion}>D&amp;G E-Commerce · v1.0.0</Text>
             </ScrollView>
 
             {/* DELETE ACCOUNT MODAL */}
@@ -331,7 +331,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         paddingHorizontal: 12,
         borderRadius: 12,
-        backgroundColor: '#F3F4F6',
+        backgroundColor: '#F8F3E8',
         borderWidth: 1,
         borderColor: Colors.border,
     },
@@ -411,7 +411,7 @@ const styles = StyleSheet.create({
     },
     inputLabel: { fontSize: 13, fontWeight: '700', color: Colors.text, marginBottom: 4 },
     input: {
-        backgroundColor: '#F9FAFB',
+        backgroundColor: '#F8F3E8',
         borderRadius: 10,
         borderWidth: 1,
         borderColor: Colors.border,
@@ -426,7 +426,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 12,
         paddingVertical: 10,
         marginLeft: 8,
-        backgroundColor: '#F3F4F6',
+        backgroundColor: '#F8F3E8',
         borderRadius: 10,
         borderWidth: 1,
         borderColor: Colors.border,
@@ -435,7 +435,7 @@ const styles = StyleSheet.create({
     modalCancelBtn: {
         flex: 1,
         paddingVertical: 13,
-        backgroundColor: '#F3F4F6',
+        backgroundColor: '#F8F3E8',
         borderRadius: 12,
         alignItems: 'center',
     },

@@ -1,38 +1,36 @@
 {
   "expo": {
-    "name": "E-Commerce App",
-    "slug": "dg-retail",
+    "name": "D&G E-Commerce",
+    "slug": "dg-e-commerce",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/DGLoGo.jpg",
-    "scheme": "dgretail",
+    "icon": "./assets/images/dg-ecommerce-icon.png",
+    "scheme": "dgecommerce",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/DGLoGo.jpg",
+      "icon": "./assets/images/dg-ecommerce-icon.png",
       "bundleIdentifier": "com.dgretail.app",
       "supportsTablet": true
     },
     "android": {
       "package": "com.dgretail.app",
       "adaptiveIcon": {
-        "backgroundColor": "#2E7D32",
-        "foregroundImage": "./assets/DGLoGo.jpg",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/DGLoGo.jpg"
+        "backgroundColor": "#0D2B45",
+        "foregroundImage": "./assets/images/dg-ecommerce-icon.png"
       },
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "output": "server",
-      "favicon": "./assets/DGLoGo.jpg"
+      "favicon": "./assets/images/dg-ecommerce-icon.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#000000",
-          "image": "./assets/splash.jpg",
+          "backgroundColor": "#F8F3E8",
+          "image": "./assets/images/dg-ecommerce-icon.png",
           "imageWidth": 200
         }
       ]
@@ -48,8 +46,9 @@
         }
       },
       "eas": {
-        "projectId": "5b71dac4-0402-4489-a389-2b9bd115de6d"
+        "projectId": "d9e80aa8-7cfb-46fc-9bd9-1d58ad28eae0"
       }
-    }
+    },
+    "owner": "irakozed"
   }
 }

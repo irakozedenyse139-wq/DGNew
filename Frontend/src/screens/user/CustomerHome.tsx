@@ -218,9 +218,9 @@ const styles = StyleSheet.create({
     notificationBanner: {
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: '#ECFDF5',
+        backgroundColor: '#F6EBDD',
         borderWidth: 1.5,
-        borderColor: '#A7F3D0',
+        borderColor: '#E6D0B4',
         borderRadius: 14,
         padding: 12,
         marginTop: 10,
@@ -236,8 +236,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginRight: 10,
     },
-    bannerTitle: { fontSize: 13, fontWeight: '800', color: '#065F46' },
-    bannerSub: { fontSize: 12, color: '#047857', marginTop: 1 },
+    bannerTitle: { fontSize: 13, fontWeight: '800', color: '#0D2B45' },
+    bannerSub: { fontSize: 12, color: '#895D38', marginTop: 1 },
     categoryContainer: { marginVertical: 8 },
     categoryScroll: { paddingVertical: 4 },
     categoryPill: {

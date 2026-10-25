@@ -461,7 +461,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     noImage: {
-        backgroundColor: '#F3F4F6',
+        backgroundColor: '#F8F3E8',
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -534,7 +534,7 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 90,
         borderRadius: 10,
-        backgroundColor: '#E5E7EB',
+        backgroundColor: '#DCE5EC',
         justifyContent: 'center',
         alignItems: 'center',
         marginVertical: 10,
