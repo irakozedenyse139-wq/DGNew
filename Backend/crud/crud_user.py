@@ -2,7 +2,6 @@ from sqlalchemy.orm import Session
 from models.user import User
 from schemas.user import UserCreate
 from core.security import get_password_hash
-import uuid
 
 from models.order import Order
 from models.cart import Cart
@@ -15,7 +14,6 @@ def get_user_by_email(db: Session, email: str):
 def create_user(db: Session, user: UserCreate):
     hashed_password = get_password_hash(user.password)
     db_user = User(
-        id=str(uuid.uuid4()),
         email=user.email.strip().lower(),
         password_hash=hashed_password,
         is_admin=False
@@ -25,11 +23,11 @@ def create_user(db: Session, user: UserCreate):
     db.refresh(db_user)
     return db_user
 
-def delete_user(db: Session, user_id: str):
+def delete_user(db: Session, user_id: int):
     # Cascade delete all orders and carts for the user
-    db.query(Order).filter(Order.user_id == str(user_id)).delete()
-    db.query(Cart).filter(Cart.user_id == str(user_id)).delete()
-    user = db.query(User).filter(User.id == str(user_id)).first()
+    db.query(Order).filter(Order.user_id == user_id).delete()
+    db.query(Cart).filter(Cart.user_id == user_id).delete()
+    user = db.query(User).filter(User.id == user_id).first()
     if user:
         db.delete(user)
         db.commit()

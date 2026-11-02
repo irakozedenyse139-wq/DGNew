@@ -60,7 +60,7 @@
 **Response `200`:**
 ```json
 {
-  "id": "uuid-string",
+  "id": 1,
   "email": "user@example.com",
   "is_admin": false
 }
@@ -132,7 +132,7 @@
 **Response `200`:**
 ```json
 {
-  "id": "uuid-string",
+  "id": 1,
   "email": "user@example.com",
   "is_admin": false
 }
@@ -162,7 +162,7 @@
 | `DELETE` | `/api/users/{user_id}` | Bearer |
 
 **Path Parameter:**
-- `user_id` — UUID string of the user to delete.
+- `user_id` — Integer ID of the user to delete.
 
 **Response `200`:**
 ```json
@@ -305,7 +305,7 @@ GET /api/products/?category=Shoes&search=air
 ```json
 {
   "id": "uuid-string",
-  "user_id": "uuid-string",
+  "user_id": 1,
   "items": [
     {
       "product_id": "uuid-string",
@@ -357,7 +357,7 @@ GET /api/products/?category=Shoes&search=air
 ```json
 {
   "id": "uuid-string",
-  "user_id": "uuid-string",
+  "user_id": 1,
   "items": [],
   "total_price": 0.0
 }
@@ -396,7 +396,7 @@ GET /api/products/?category=Shoes&search=air
 ```json
 {
   "id": "uuid-string",
-  "user_id": "uuid-string",
+  "user_id": 1,
   "items": [...],
   "total_price": 240.00,
   "paid": false,

@@ -13,7 +13,7 @@ const POLL_INTERVAL_MS = 5000; // 5-second polling for real-time delivery sync
 let cachedOrders: any[] = [];
 
 export default function CustomerOrders() {
-    const { user } = useAuth();
+    const { user, token } = useAuth();
     const { t, lang } = useLanguage();
     const [orders, setOrders] = useState<any[]>(cachedOrders);
     const [loading, setLoading] = useState(cachedOrders.length === 0);
@@ -22,6 +22,14 @@ export default function CustomerOrders() {
     const pollRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
     const fetchOrders = useCallback(async (silent = false) => {
+        if (!token) {
+            cachedOrders = [];
+            setOrders([]);
+            setLoading(false);
+            setRefreshing(false);
+            return;
+        }
+
         try {
             if (!silent && cachedOrders.length === 0) setLoading(true);
             const res = await api.get('/orders/');
@@ -34,20 +42,22 @@ export default function CustomerOrders() {
             setLoading(false);
             setRefreshing(false);
         }
-    }, []);
+    }, [token]);
 
     useEffect(() => {
         fetchOrders(cachedOrders.length > 0);
 
         // Real-time sync every 5 seconds — both admin confirm and customer confirm update in blink
-        pollRef.current = setInterval(() => {
-            fetchOrders(true);
-        }, POLL_INTERVAL_MS);
+        if (token) {
+            pollRef.current = setInterval(() => {
+                fetchOrders(true);
+            }, POLL_INTERVAL_MS);
+        }
 
         return () => {
             if (pollRef.current) clearInterval(pollRef.current);
         };
-    }, [fetchOrders]);
+    }, [fetchOrders, token]);
 
     const onRefresh = () => { setRefreshing(true); fetchOrders(true); };
 

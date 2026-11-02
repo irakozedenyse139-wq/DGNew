@@ -11,7 +11,7 @@ class OrderResponse(BaseModel):
     model_config = {"from_attributes": True}
 
     id: str
-    user_id: str
+    user_id: int
     items: List[Any]
     total_price: float
     paid: bool

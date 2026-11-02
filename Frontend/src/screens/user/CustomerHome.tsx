@@ -17,6 +17,7 @@ import ProductCard from '../../components/ProductCard';
 import { Colors } from '../../constants/Colors';
 import { useLanguage } from '../../context/LanguageContext';
 import { formatRWF } from '../../constants/i18n';
+import { useAuth } from '../../context/AuthContext';
 
 const CATEGORIES = ['All', 'Clothes', 'Shoes', 'Bags', 'Household', 'Jewelry', 'Cosmetics'];
 const POLL_INTERVAL_MS = 5000; // 5-second real-time sync for blink updates
@@ -28,6 +29,7 @@ let cachedPendingOrders: any[] = [];
 export default function CustomerHome() {
     const router = useRouter();
     const { t, lang } = useLanguage();
+    const { token } = useAuth();
     const [products, setProducts] = useState<any[]>(cachedProducts);
     const [pendingOrders, setPendingOrders] = useState<any[]>(cachedPendingOrders);
     const [selectedCategory, setSelectedCategory] = useState('All');
@@ -45,9 +47,13 @@ export default function CustomerHome() {
     const fetchData = useCallback(async (silent = false) => {
         try {
             if (!silent && cachedProducts.length === 0) setLoading(true);
+            if (!token) {
+                cachedPendingOrders = [];
+                setPendingOrders([]);
+            }
             const [productsRes, ordersRes] = await Promise.all([
                 api.get('/products/'),
-                api.get('/orders/').catch(() => ({ data: [] })),
+                token ? api.get('/orders/') : Promise.resolve({ data: [] }),
             ]);
 
             const newProducts = productsRes.data || [];
@@ -65,7 +71,7 @@ export default function CustomerHome() {
             setLoading(false);
             setRefreshing(false);
         }
-    }, []);
+    }, [token]);
 
     useEffect(() => {
         // Fetch silently if we already have cached data to show immediately

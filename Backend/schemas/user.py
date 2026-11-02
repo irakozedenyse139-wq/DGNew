@@ -12,7 +12,7 @@ class UserLogin(BaseModel):
 class UserResponse(BaseModel):
     model_config = {"from_attributes": True}
 
-    id: str
+    id: int
     email: str
     is_admin: bool
 

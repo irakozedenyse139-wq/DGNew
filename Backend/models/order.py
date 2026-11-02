@@ -1,12 +1,12 @@
 from datetime import datetime
-from sqlalchemy import Column, String, DECIMAL, Boolean, DateTime, ForeignKey, JSON, func
+from sqlalchemy import Column, String, Integer, DECIMAL, Boolean, DateTime, ForeignKey, JSON, func
 from database import Base
 
 class Order(Base):
     __tablename__ = "orders"
 
     id = Column(String, primary_key=True, index=True)
-    user_id = Column(String, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
     items = Column(JSON, nullable=False)
     total_price = Column(DECIMAL(10, 2), nullable=False)
     paid = Column(Boolean, default=False)

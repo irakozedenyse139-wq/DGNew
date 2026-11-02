@@ -6,7 +6,7 @@ const getBaseUrl = (): string => {
     if (process.env.EXPO_PUBLIC_API_URL) {
         return process.env.EXPO_PUBLIC_API_URL.replace(/\/+$/, '');
     }
-    return 'https://dgapp.onrender.com/api';
+    return 'https://dgnew-jgvd.onrender.com/api';
 };
 
 const API_BASE_URL = getBaseUrl();

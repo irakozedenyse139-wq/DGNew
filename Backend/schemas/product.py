@@ -1,4 +1,4 @@
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, field_validator
 from typing import Dict, List, Any, Optional
 
 class ProductBase(BaseModel):
@@ -24,4 +24,9 @@ class ProductResponse(ProductBase):
     model_config = {"from_attributes": True}
 
     id: str
+
+    @field_validator("id", mode="before")
+    @classmethod
+    def stringify_id(cls, value: Any) -> Any:
+        return str(value) if isinstance(value, int) else value
 
