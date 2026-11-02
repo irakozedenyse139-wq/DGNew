@@ -12,9 +12,11 @@ export default function TabLayout() {
     const isAdmin = user?.role === 'admin' || user?.is_admin === true;
     const insets = useSafeAreaInsets();
 
+    // Dynamically calculate bottom padding to avoid phones' soft navigation bar (Back/Home/Recents)
+    // On devices like Samsung where the user can show/hide keys, insets.bottom updates automatically
     const isAndroid = Platform.OS === 'android';
-    const bottomPadding = Math.max(insets.bottom, isAndroid ? 24 : 8);
-    const tabHeight = 60 + bottomPadding;
+    const bottomPadding = insets.bottom > 0 ? insets.bottom : (isAndroid ? 10 : 6);
+    const tabHeight = 54 + bottomPadding;
 
     return (
         <Tabs
@@ -24,7 +26,7 @@ export default function TabLayout() {
                 tabBarInactiveTintColor: Colors.textMuted,
                 tabBarHideOnKeyboard: true,
                 tabBarStyle: {
-                    backgroundColor: Colors.card,
+                    backgroundColor: '#FFFFFF',
                     borderTopColor: Colors.border,
                     borderTopWidth: 1,
                     height: tabHeight,
@@ -40,9 +42,6 @@ export default function TabLayout() {
                     fontSize: 11,
                     fontWeight: '600',
                     marginTop: 2,
-                },
-                tabBarItemStyle: {
-                    paddingVertical: 2,
                 },
                 headerStyle: {
                     backgroundColor: Colors.primary,

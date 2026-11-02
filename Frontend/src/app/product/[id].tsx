@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
         position: 'relative',
         width: SCREEN_WIDTH,
         height: 330,
-        backgroundColor: '#DCE5EC',
+        backgroundColor: '#E5E7EB',
     },
     carouselImage: {
         width: SCREEN_WIDTH,
@@ -276,7 +276,7 @@ const styles = StyleSheet.create({
         marginBottom: 16,
     },
     metaBadge: {
-        backgroundColor: '#F6EBDD',
+        backgroundColor: '#E8F5E9',
         paddingHorizontal: 12,
         paddingVertical: 5,
         borderRadius: 8,

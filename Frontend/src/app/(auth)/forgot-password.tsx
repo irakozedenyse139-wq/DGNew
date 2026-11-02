@@ -55,7 +55,7 @@ export default function ForgotPasswordScreen() {
                 <ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps="handled">
                     <View style={styles.brandContainer}>
                         <Image
-                            source={require('../../../assets/images/dg-ecommerce-icon.png')}
+                            source={require('../../../assets/DGLoGo.jpg')}
                             style={styles.logoImage}
                             resizeMode="contain"
                         />
@@ -88,12 +88,12 @@ export default function ForgotPasswordScreen() {
 }
 
 const styles = StyleSheet.create({
-    safeContainer: { flex: 1, backgroundColor: '#F8F3E8' },
+    safeContainer: { flex: 1, backgroundColor: '#F3F4F6' },
     container: { flexGrow: 1, justifyContent: 'center', padding: 20 },
     brandContainer: { alignItems: 'center', marginBottom: 20 },
     logoImage: {
-        width: 82,
-        height: 82,
+        width: 90,
+        height: 90,
         borderRadius: 20,
         elevation: 4,
     },
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         padding: 24,
         borderWidth: 1.5,
-        borderColor: '#DCE5EC',
+        borderColor: '#E5E7EB',
         elevation: 3,
     },
     title: { fontSize: 22, fontWeight: '800', color: Colors.text, textAlign: 'center' },

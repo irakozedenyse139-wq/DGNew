@@ -67,7 +67,7 @@ export default function RegisterScreen() {
                     {/* Branding Header */}
                     <View style={styles.brandContainer}>
                         <Image
-                            source={require('../../../assets/images/dg-ecommerce-icon.png')}
+                            source={require('../../../assets/DGLoGo.jpg')}
                             style={styles.logoImage}
                             resizeMode="contain"
                         />
@@ -134,7 +134,7 @@ export default function RegisterScreen() {
 const styles = StyleSheet.create({
     safeContainer: {
         flex: 1,
-        backgroundColor: '#F8F3E8',
+        backgroundColor: '#F3F4F6',
     },
     keyboardContainer: {
         flex: 1,
@@ -150,9 +150,9 @@ const styles = StyleSheet.create({
         marginBottom: 24,
     },
     logoImage: {
-        width: 82,
-        height: 82,
-        borderRadius: 18,
+        width: 100,
+        height: 100,
+        borderRadius: 22,
         marginBottom: 8,
         shadowColor: Colors.primary,
         shadowOffset: { width: 0, height: 4 },
@@ -174,7 +174,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         padding: 24,
         borderWidth: 1.5,
-        borderColor: '#DCE5EC',
+        borderColor: '#E5E7EB',
         shadowColor: '#000000',
         shadowOffset: { width: 0, height: 6 },
         shadowOpacity: 0.08,
